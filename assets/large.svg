@@ -1,0 +1,30 @@
+<svg width="397" height="492" viewBox="0 0 397 492" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="397" height="492" fill="#0E1525"/>
+<text fill="#B3B8BF" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="14" letter-spacing="0em"><tspan x="351" y="223.591">[tick]</tspan></text>
+<rect width="397" height="202" fill="url(#pattern0)"/>
+<text fill="#BBC0C7" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="14" letter-spacing="0em"><tspan x="52" y="437.591">[bio]</tspan></text>
+<rect x="148" y="372" width="144" height="32" rx="9" fill="#1C2333"/>
+<text fill="#B3B8BF" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="15" letter-spacing="0.02em"><tspan x="160" y="393.455">Copy profile link</tspan></text>
+<text fill="white" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="15" letter-spacing="0.02em"><tspan x="305" y="389.455">...</tspan></text>
+<path d="M52 379C52 375.134 55.134 372 59 372H128C131.866 372 135 375.134 135 379V397C135 400.866 131.866 404 128 404H59C55.134 404 52 400.866 52 397V379Z" fill="#0053A6"/>
+<text fill="#B0CAE3" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="15" letter-spacing="0.02em"><tspan x="60" y="393.455">+  Follow</tspan></text>
+<rect x="119" y="318" width="71" height="21" rx="10.5" fill="#8F226B"/>
+<text fill="#E090C6" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="12" letter-spacing="0.005em"><tspan x="124" y="332.864">Repliy Rep</tspan></text>
+<rect x="52" y="318" width="58" height="21" rx="10.5" fill="#046113"/>
+<text fill="#56C169" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="12" letter-spacing="0.005em"><tspan x="61" y="332.864">Hacker</tspan></text>
+<text fill="#F5F9FC" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="30" letter-spacing="0.015em"><tspan x="52" y="304.909">[firstName] [lastName]</tspan></text>
+<text fill="#B7BDC2" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="13" letter-spacing="0.005em"><tspan x="52" y="357.727">[username]</tspan></text>
+<path d="M0 202L396.5 202" stroke="white"/>
+<rect x="52" y="105" width="160" height="160" rx="80" fill="url(#pattern1)"/>
+<text fill="#858B93" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="14" letter-spacing="0em"><tspan x="52" y="463.591">[time]</tspan></text>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_1_4" transform="translate(0 -0.0527537) scale(0.000260417 0.000511809)"/>
+</pattern>
+<pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1_1_4" transform="scale(0.00177305)"/>
+</pattern>
+<image id="image0_1_4" width="3840" height="2160" xlink:href="[banner]"/>
+<image id="image1_1_4" width="564" height="564" xlink:href="[pfp]"/>
+</defs>
+</svg>
