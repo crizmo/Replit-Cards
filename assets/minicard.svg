@@ -2,13 +2,13 @@
 <rect x="-6.10352e-05" width="370.043" height="167" fill="#0E1525"/>
 <text fill="#F5F9FC" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="14" letter-spacing="0.015em"><tspan x="109" y="27.0909">[username]</tspan></text>
 <text fill="#BBC0C7" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="12" letter-spacing="0em"><tspan x="108.741" y="77.7269">[bio]</tspan></text>
-<text fill="#858B93" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="12" letter-spacing="0em"><tspan x="40" y="126.864">[time]</tspan></text>
+<text fill="#858B93" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="12" letter-spacing="0em"><tspan x="40" y="135.864">[time]</tspan></text>
 <rect x="170.633" y="38.2302" width="92.8388" height="21.6259" rx="9" fill="#1C2333"/>
 <text fill="#B3B8BF" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="10" letter-spacing="0.02em"><tspan x="178" y="52.4205">Copy profile link</tspan></text>
 <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="10" letter-spacing="0.02em"><tspan x="272.165" y="49.6791">...</tspan></text>
 <path d="M108.741 45.2302C108.741 41.3642 111.875 38.2302 115.741 38.2302H155.252C159.118 38.2302 162.252 41.3642 162.252 45.2302V52.8561C162.252 56.7221 159.118 59.8561 155.252 59.8561H115.741C111.875 59.8561 108.741 56.7221 108.741 52.8561V45.2302Z" fill="#0053A6"/>
 <text fill="#B0CAE3" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="10" letter-spacing="0.02em"><tspan x="113.547" y="52.6723">+ Follow</tspan></text>
-<text fill="#B3B8BF" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="12" letter-spacing="0em"><tspan x="72" y="106.16">&#x2705;</tspan></text>
+<text fill="#B3B8BF" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="12" letter-spacing="0em"><tspan x="72" y="106.16">[tick]</tspan></text>
 <text fill="#B3B8BF" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="12" letter-spacing="0em"><tspan x="40" y="106.16">&#x1f31f;</tspan></text>
 <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="12" letter-spacing="0em"><tspan x="56" y="105.16">&#x1f525;</tspan></text>
 <path d="M317 0H369.495V167H157.5L244 140.5L292.5 106.5V46.5L317 0Z" fill="url(#pattern0)"/>

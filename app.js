@@ -44,11 +44,12 @@ app.get('/card/:id', async (req, res) => {
             bio = '';
         }
 
-        if (bio.length > 100) {
-            bio = bio.replace(/(.{40})/g, '$1\n');
-        } else if (bio.length > 50) {
-            bio = bio.replace(/(.{30})/g, '$1\n');
-        } 
+        if (bio.length > 50) {
+            bio = bio.replace(/(.{45})/g, '$1\n');
+            bio = bio.substring(0, 145) + ' ...';
+        } else {
+            bio = bio.substring(0, 50);
+        }
 
         // verified
         isVerified = isVerified ? '&#x2705;' : '&#10062;';
@@ -98,14 +99,12 @@ app.get('/card/:id', async (req, res) => {
 app.get('/mini/:id', async (req, res) => {
     getData(req.params.id).then(async data => {
         let user 
-        let username , firstName , lastName , bio , isVerified , timeCreated , pfp , banner
+        let username , bio , isVerified , timeCreated , pfp , banner
         let pfp64 , banner64
 
         try {
             user = data.userByUsername;
             username = user.username;
-            firstName = user.firstName;
-            lastName = user.lastName;
             bio = user.bio;
             isVerified = user.isVerified;
             timeCreated = user.timeCreated;
@@ -116,9 +115,6 @@ app.get('/mini/:id', async (req, res) => {
             res.send('User not found or something went wrong.\n' + error);
             return;
         }
-
-        // lastName
-        lastName = lastName ? lastName : ''; 
         
         // bio
         try {
@@ -128,14 +124,15 @@ app.get('/mini/:id', async (req, res) => {
             bio = '';
         }
 
-        if (bio.length > 100) {
-            bio = bio.replace(/(.{40})/g, '$1\n');
-        } else if (bio.length > 50) {
-            bio = bio.replace(/(.{30})/g, '$1\n');
-        } 
+        if (bio.length > 27) {
+            bio = bio.replace(/(.{27})/g, '$1\n');
+            bio = bio.substring(0, 77) + ' ...';
+        } else {
+            bio = bio.substring(0, 27);
+        }
 
         // verified
-        isVerified = isVerified ? '✅' : '❎';
+        isVerified = isVerified ? '&#x2705;' : '&#10062;';
 
         // time created
         let date = new Date(timeCreated);
@@ -165,8 +162,9 @@ app.get('/mini/:id', async (req, res) => {
 
         // card
         card = fs.readFileSync('./assets/minicard.svg', {encoding: 'utf-8'}).toString()
-        card = card.replace('[username]', "@"+username);
+        card = card.replace('[username]', username);
         card = card.replace('[bio]', bio);
+        card = card.replace('[tick]', isVerified);
         card = card.replace('[time]', "Created on : "+ timeCreated);
         card = card.replace('[pfp]', pfp64);
         card = card.replace('[banner]', banner64);
