@@ -13,6 +13,17 @@ Display your replit user profile as a card on your website whereever you want.
 <img src="https://replit-cards.kurizu.repl.co/card/kurizu?pfp=https://cdn.discordapp.com/attachments/1017778549169590372/1017811134033694770/kurizu.png" alt="Replit Cards"> <br><br>
 <img src="https://replit-cards.kurizu.repl.co/mini/kurizu?pfp=https://cdn.discordapp.com/attachments/1017778549169590372/1017811134033694770/kurizu.png" alt="Replit Cards">
 
+<p>There are 2 card options <br>
+Small :- https://replit-cards.kurizu.repl.co/mini/ <br>
+Large :- https://replit-cards.kurizu.repl.co/large/
+</p>
+<br>
+<p>There are 2 queries:- <br>
+pfp :- ?pfp=image_url_here <br>
+banner :- ?banner=image_url_here
+</p>
+<br>
+
 <p>You can change your pfp and banner using the pfp & banner queries</p>
 <p>Example Large card:</p>
 <p>https://replit-cards.kurizu.repl.co/card/kurizu?pfp=yourPfpLink&banner=yourBannerLink</p>
