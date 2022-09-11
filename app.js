@@ -2,8 +2,15 @@ import express from 'express';
 const app = express();
 
 import { getData } from './client.js';
+import { isImage } from './val_url.js';
 import fs from 'fs';
 import imageToBase64 from 'image-to-base64';
+
+import dotenv from 'dotenv';
+dotenv.config();
+
+import { Webhook, MessageBuilder } from 'discord-webhook-node';
+const hook = new Webhook(process.env.WEBHOOK_URL);
 
 app.get('/', (req, res) => {
     const html = fs.readFileSync('./home.html', 'utf8');
@@ -25,9 +32,26 @@ app.get('/card/:id', async (req, res) => {
             bio = user.bio;
             isVerified = user.isVerified;
             timeCreated = user.timeCreated;
-            
-            pfp = req.query.pfp || "https://cdn.discordapp.com/attachments/1017778549169590372/1017806356188762162/replit.png";
-            banner = req.query.banner || "https://cdn.discordapp.com/attachments/1017778549169590372/1017782722963460146/repl_code.png";
+
+            if(req.query.pfp){
+                if(isImage(req.query.pfp)){
+                    pfp = req.query.pfp;
+                } else {
+                    pfp = "https://cdn.discordapp.com/attachments/1017778549169590372/1017806356188762162/replit.png";
+                }
+            } else {
+                pfp = "https://cdn.discordapp.com/attachments/1017778549169590372/1017806356188762162/replit.png";
+            }
+
+            if(req.query.banner){
+                if(isImage(req.query.banner)){
+                    banner = req.query.banner;
+                } else {
+                    banner = "https://cdn.discordapp.com/attachments/1017778549169590372/1017782722963460146/repl_code.png";
+                }
+            } else {
+                banner = "https://cdn.discordapp.com/attachments/1017778549169590372/1017782722963460146/repl_code.png";
+            }
         } catch (error) {
             res.send('User not found or something went wrong.\n' + error);
             return;
@@ -169,9 +193,37 @@ app.get('/mini/:id', async (req, res) => {
         card = card.replace('[pfp]', pfp64);
         card = card.replace('[banner]', banner64);
         
-        res.writeHead(200, {'Content-Type': 'image/svg+xml'})
-        res.end(card)
+        try {
+            res.writeHead(200, {'Content-Type': 'image/svg+xml'})
+            res.end(card)
+        } catch (error) {
+            res.send('Something went wrong.\n' + error);
+        }
+
     });
+});
+
+process.on('unhandledRejection', async (reason, p, origin) => {
+    const embed = new MessageBuilder()
+        .setTitle('Unhandled Rejection')
+        .addField('Reason', reason)
+        .addField('Promise', p)
+        .addField('Origin', origin)
+        .setColor('RED')
+        .setTimestamp()
+        .setFooter('Unhandled Rejection')
+    hook.send(embed);
+});
+
+process.on('uncaughtExceptionMonitor', async (err, origin) => {
+    const embed = new MessageBuilder()
+        .setTitle('Uncaught Exception')
+        .addField('Error', err)
+        .addField('Origin', origin)
+        .setColor('RED')
+        .setTimestamp()
+        .setFooter('Uncaught Exception')
+    hook.send(embed);
 });
 
 app.listen(3000, () => {
