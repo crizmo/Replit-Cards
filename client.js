@@ -1,5 +1,4 @@
 import { gql, GraphQLClient } from 'graphql-request';
-
 const client = new GraphQLClient('https://replit.com/graphql', {});
 
 client.setHeaders({
